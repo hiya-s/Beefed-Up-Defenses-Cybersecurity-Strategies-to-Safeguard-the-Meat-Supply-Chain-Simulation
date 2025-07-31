@@ -1,0 +1,28 @@
+time,system,event
+2,RFID Livestock Tags,FAILED
+6,Automated Feeding System,FAILED
+10,RFID Livestock Tags,RECOVERED
+11,Processing ERP,FAILED
+17,Cold Chain Temperature Sensors,FAILED
+18,Automated Feeding System,RECOVERED
+22,Meat Processing Robotics,FAILED
+25,Cold Chain Temperature Sensors,RECOVERED
+31,Processing ERP,RECOVERED
+34,Cold Chain Temperature Sensors,FAILED
+38,Meat Processing Robotics,RECOVERED
+38,Export Customs API,FAILED
+41,Processing ERP,FAILED
+42,Cold Chain Temperature Sensors,RECOVERED
+42,Cloud SCM Platform,FAILED
+48,Gov Compliance Monitor,FAILED
+50,Export Customs API,RECOVERED
+60,Cloud SCM Platform,RECOVERED
+61,Processing ERP,RECOVERED
+72,RFID Livestock Tags,FAILED
+73,Gov Compliance Monitor,RECOVERED
+76,Automated Feeding System,FAILED
+80,RFID Livestock Tags,RECOVERED
+88,Automated Feeding System,RECOVERED
+90,Cold Chain Temperature Sensors,FAILED
+98,Cold Chain Temperature Sensors,RECOVERED
+99,Farm SCADA Gateway,FAILED

@@ -1,0 +1,77 @@
+{
+  "RFID Livestock Tags": {
+    "dependencies": [],
+    "failure_prob": 0.015,
+    "recovery_time": 8
+  },
+  "Automated Feeding System": {
+    "dependencies": ["RFID Livestock Tags"],
+    "failure_prob": 0.02,
+    "recovery_time": 12
+  },
+  "Smart Irrigation Controller": {
+    "dependencies": [],
+    "failure_prob": 0.01,
+    "recovery_time": 10
+  },
+  "Farm SCADA Gateway": {
+    "dependencies": ["RFID Livestock Tags", "Automated Feeding System", "Smart Irrigation Controller"],
+    "failure_prob": 0.015,
+    "recovery_time": 14
+  },
+  "Meat Processing Robotics": {
+    "dependencies": ["Farm SCADA Gateway"],
+    "failure_prob": 0.012,
+    "recovery_time": 16
+  },
+  "QA & Safety Sensors": {
+    "dependencies": ["Farm SCADA Gateway"],
+    "failure_prob": 0.01,
+    "recovery_time": 10
+  },
+  "Processing ERP": {
+    "dependencies": ["Meat Processing Robotics", "QA & Safety Sensors"],
+    "failure_prob": 0.008,
+    "recovery_time": 20
+  },
+  "Cloud SCM Platform": {
+    "dependencies": ["Processing ERP"],
+    "failure_prob": 0.005,
+    "recovery_time": 18
+  },
+  "Cloud Analytics Engine": {
+    "dependencies": ["Cloud SCM Platform"],
+    "failure_prob": 0.004,
+    "recovery_time": 15
+  },
+  "Logistics GPS Tracker": {
+    "dependencies": ["Processing ERP", "Cloud SCM Platform"],
+    "failure_prob": 0.007,
+    "recovery_time": 10
+  },
+  "Cold Chain Temperature Sensors": {
+    "dependencies": ["Logistics GPS Tracker"],
+    "failure_prob": 0.01,
+    "recovery_time": 8
+  },
+  "Export Customs API": {
+    "dependencies": ["Cloud SCM Platform"],
+    "failure_prob": 0.005,
+    "recovery_time": 12
+  },
+  "Gov Compliance Monitor": {
+    "dependencies": ["Farm SCADA Gateway", "Processing ERP", "Cloud SCM Platform"],
+    "failure_prob": 0.003,
+    "recovery_time": 25
+  },
+  "Incident Response AI": {
+    "dependencies": ["Gov Compliance Monitor", "Cloud Analytics Engine"],
+    "failure_prob": 0.002,
+    "recovery_time": 15
+  },
+  "Threat Sharing Hub": {
+    "dependencies": ["Incident Response AI"],
+    "failure_prob": 0.001,
+    "recovery_time": 10
+  }
+}
